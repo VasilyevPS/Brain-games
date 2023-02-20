@@ -8,12 +8,16 @@ class App {
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
+        System.out.println("2 - Even");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
-        int gameOption = scanner.nextInt();
+        String gameOption = scanner.next();
 
-        if (gameOption == 1) {
-            Cli.greeting();
+        switch (gameOption) {
+            case "1" -> Cli.greeting();
+            case "2" -> Even.evenGame();
+            default -> {
+            }
         }
 
         scanner.close();
