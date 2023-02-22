@@ -7,3 +7,6 @@ https://asciinema.org/a/ixOdAyy272C4sltrbbI8PmE7c
 
 ### Asciinema after step 6 (Calc):
 https://asciinema.org/a/iBtxre42f9iyVEiJdGfa71cDn
+
+### Asciinema after step 7 (GCD):
+https://asciinema.org/a/LjdXM3QujEvtOXku8qEFzwBMk
