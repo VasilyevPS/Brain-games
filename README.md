@@ -13,3 +13,6 @@ https://asciinema.org/a/LjdXM3QujEvtOXku8qEFzwBMk
 
 ### Asciinema after step 8 (Progression):
 https://asciinema.org/a/UFYQbgBRVz8EI9wzMThuQ4l5N
+
+### Asciinema after step 9 (Prime):
+https://asciinema.org/a/DQ8NxI4dgTlUIsLWfJbNSxlyp
