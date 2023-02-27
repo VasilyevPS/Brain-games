@@ -10,3 +10,6 @@ https://asciinema.org/a/iBtxre42f9iyVEiJdGfa71cDn
 
 ### Asciinema after step 7 (GCD):
 https://asciinema.org/a/LjdXM3QujEvtOXku8qEFzwBMk
+
+### Asciinema after step 8 (Progression):
+https://asciinema.org/a/UFYQbgBRVz8EI9wzMThuQ4l5N
