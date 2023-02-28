@@ -9,11 +9,16 @@ public class Prime {
         String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
         for (var round : roundData) {
-            int number = (int) (Math.random() * MAX_NUMBER);
-            round[0] = number + "";
-            round[1] = isPrime(number);
+            generatePrimeData(round);
         }
+
         Engine.gameProcess(questionMessage, roundData);
+    }
+
+    public static void generatePrimeData(String[] round) {
+        int number = (int) (Math.random() * MAX_NUMBER);
+        round[0] = number + "";
+        round[1] = isPrime(number);
     }
 
     public static String isPrime(int number) {
