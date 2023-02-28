@@ -11,19 +11,29 @@ public class Progression {
         String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
         for (var round : roundData) {
-            var firstNumber = (int) (Math.random() * MAX_FIRST_NUMBER);
-            var difference = (int) (Math.random() * MAX_DIFFERENCE) + 1;
-            var hiddenNumberPlace = (int) (Math.random() * PROGRESSION_LENGTH);
-            round[0] = "";
-            for (var i = 0; i < PROGRESSION_LENGTH; i++) {
-                if (i != hiddenNumberPlace) {
-                    round[0] = round[0] + (firstNumber + difference * i) + " ";
-                } else {
-                    round[0] = round[0] + ".." + " ";
-                    round[1] = firstNumber + difference * i + "";
-                }
+            generateProgressionData(round);
+        }
+
+        Engine.gameProcess(questionMessage, roundData);
+    }
+
+    public static void generateProgressionData(String[] round) {
+        var firstNumber = (int) (Math.random() * MAX_FIRST_NUMBER);
+        var difference = (int) (Math.random() * MAX_DIFFERENCE) + 1;
+        var hiddenNumberPlace = (int) (Math.random() * PROGRESSION_LENGTH);
+        round[0] = generateProgression(firstNumber, difference, hiddenNumberPlace);
+        round[1] = firstNumber + difference * hiddenNumberPlace + "";
+    }
+
+    public static String generateProgression(int firstNumber, int difference, int hiddenNumberPlace) {
+        StringBuilder progression = new StringBuilder();
+        for (var i = 0; i < PROGRESSION_LENGTH; i++) {
+            if (i != hiddenNumberPlace) {
+                progression.append(firstNumber + difference * i).append(" ");
+            } else {
+                progression.append("..").append(" ");
             }
         }
-        Engine.gameProcess(questionMessage, roundData);
+        return progression.toString();
     }
 }
