@@ -21,7 +21,7 @@ public class Gcd {
         round[0] = firstNumber + " " + secondNumber;
         round[1] = gcd(firstNumber, secondNumber) + "";
     }
-    
+
     public static int gcd(int a, int b) {
         if (a % b == 0) {
             return Math.abs(b);
