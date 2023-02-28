@@ -9,14 +9,22 @@ public class Even {
         String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
         for (var round : roundData) {
-            int number = (int) (Math.random() * MAX_NUMBER);
-            round[0] = number + "";
-            if (number % 2 == 0) {
-                round[1] = "yes";
-            } else {
-                round[1] = "no";
-            }
+            generateEvenData(round);
         }
+
         Engine.gameProcess(questionMessage, roundData);
+    }
+    public static void generateEvenData(String[] round) {
+        int number = (int) (Math.random() * MAX_NUMBER);
+        round[0] = number + "";
+        round[1] = isEven(number);
+    }
+
+    public static String isEven(int number) {
+        if (number % 2 == 0) {
+            return "yes";
+        } else {
+            return "no";
+        }
     }
 }
