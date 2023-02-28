@@ -6,15 +6,14 @@ public class Prime {
     static final int MAX_NUMBER = 100;
     public static void primeGame() {
         var questionMessage = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[] questions = new String[Engine.NUMBER_OF_ROUNDS];
-        String[] answers = new String[Engine.NUMBER_OF_ROUNDS];
+        String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
-        for (var n = 0; n < Engine.NUMBER_OF_ROUNDS; n++) {
+        for (var round : roundData) {
             int number = (int) (Math.random() * MAX_NUMBER);
-            questions[n] = number + "";
-            answers[n] = isPrime(number);
+            round[0] = number + "";
+            round[1] = isPrime(number);
         }
-        Engine.gameProcess(questionMessage, questions, answers);
+        Engine.gameProcess(questionMessage, roundData);
     }
 
     public static String isPrime(int number) {

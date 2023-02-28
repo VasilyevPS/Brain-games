@@ -6,18 +6,17 @@ public class Even {
     static final int MAX_NUMBER = 100;
     public static void evenGame() {
         var questionMessage = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] questions = new String[Engine.NUMBER_OF_ROUNDS];
-        String[] answers = new String[Engine.NUMBER_OF_ROUNDS];
+        String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
-        for (var n = 0; n < Engine.NUMBER_OF_ROUNDS; n++) {
+        for (var round : roundData) {
             int number = (int) (Math.random() * MAX_NUMBER);
-            questions[n] = number + "";
+            round[0] = number + "";
             if (number % 2 == 0) {
-                answers[n] = "yes";
+                round[1] = "yes";
             } else {
-                answers[n] = "no";
+                round[1] = "no";
             }
         }
-        Engine.gameProcess(questionMessage, questions, answers);
+        Engine.gameProcess(questionMessage, roundData);
     }
 }
