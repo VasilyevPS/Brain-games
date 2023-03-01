@@ -17,14 +17,10 @@ public class Even {
     public static void generateRound(String[] round) {
         int number = (int) (Math.random() * MAX_NUMBER);
         round[0] = number + "";
-        round[1] = isEven(number);
+        round[1] = isEven(number) ? "yes" : "no";
     }
 
-    public static String isEven(int number) {
-        if (number % 2 == 0) {
-            return "yes";
-        } else {
-            return "no";
-        }
+    public static boolean isEven(int number) {
+        return (number % 2 == 0);
     }
 }
