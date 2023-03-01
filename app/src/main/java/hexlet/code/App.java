@@ -25,11 +25,11 @@ class App {
 
         switch (gameOption) {
             case "1" -> Cli.greeting();
-            case "2" -> Even.evenGame();
-            case "3" -> Calc.calcGame();
-            case "4" -> Gcd.gcdGame();
-            case "5" -> Progression.progressionGame();
-            case "6" -> Prime.primeGame();
+            case "2" -> Even.startGame();
+            case "3" -> Calc.startGame();
+            case "4" -> Gcd.startGame();
+            case "5" -> Progression.startGame();
+            case "6" -> Prime.startGame();
             default -> {
             }
         }

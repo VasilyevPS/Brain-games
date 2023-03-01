@@ -4,18 +4,18 @@ import hexlet.code.Engine;
 
 public class Gcd {
     static final int MAX_NUMBER = 100;
-    public static void gcdGame() {
+    public static void startGame() {
         var questionMessage = "Find the greatest common divisor of given numbers.";
         String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
         for (var round : roundData) {
-            generateGcdData(round);
+            generateRound(round);
         }
 
         Engine.gameProcess(questionMessage, roundData);
     }
 
-    public static void generateGcdData(String[] round) {
+    public static void generateRound(String[] round) {
         var firstNumber = (int) (Math.random() * MAX_NUMBER);
         var secondNumber = (int) (Math.random() * MAX_NUMBER);
         round[0] = firstNumber + " " + secondNumber;

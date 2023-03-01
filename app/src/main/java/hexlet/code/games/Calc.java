@@ -4,18 +4,18 @@ import hexlet.code.Engine;
 
 public class Calc {
     static final int MAX_NUMBER = 20;
-    public static void calcGame() {
+    public static void startGame() {
         var questionMessage = "What is the result of the expression?";
         String[][] roundData = new String[Engine.NUMBER_OF_ROUNDS][2];
 
         for (var round : roundData) {
-            generateCalcData(round);
+            generateRound(round);
         }
 
         Engine.gameProcess(questionMessage, roundData);
     }
 
-    public static void generateCalcData(String[] round) {
+    public static void generateRound(String[] round) {
         var firstNumber = (int) (Math.random() * MAX_NUMBER);
         var secondNumber = (int) (Math.random() * MAX_NUMBER);
         var signOption = "+-*";
