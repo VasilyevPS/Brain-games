@@ -6,9 +6,12 @@ public class Engine {
     public static final int NUMBER_OF_ROUNDS = 3;
 
     public static void gameProcess(String questionMessage, String[][] roundData) {
-        String userName = Cli.greeting();
-        System.out.println(questionMessage);
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+        System.out.println(questionMessage);
 
         for (var round : roundData) {
             System.out.println("Question: " + round[0]);
