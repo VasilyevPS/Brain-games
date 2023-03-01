@@ -18,18 +18,18 @@ public class Prime {
     public static void generateRound(String[] round) {
         int number = (int) (Math.random() * MAX_NUMBER);
         round[0] = number + "";
-        round[1] = isPrime(number);
+        round[1] = isPrime(number) ? "yes" : "no";
     }
 
-    public static String isPrime(int number) {
+    public static boolean isPrime(int number) {
         if (number == 0 || number == 1) {
-            return "no";
+            return false;
         }
         for (var i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
-                return "no";
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 }
